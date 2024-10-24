@@ -14,23 +14,23 @@ public class LargeAndSmallElements {
 
         if (arr.length == 0) {
             System.out.println("Array is empty");
-        } else if (arr.length<2) {
+        } else if (arr.length < 2) {
             System.out.println("only one element in array");
-        }else {
+        } else {
             int firstMax = Integer.MIN_VALUE;
             int secondMax = Integer.MIN_VALUE;
 
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] > firstMax) {
-                    secondMax=firstMax;
+                    secondMax = firstMax;
                     firstMax = arr[i];
                 } else if (arr[i] > secondMax && arr[i] < firstMax) {
                     secondMax = arr[i];
                 }
 
             }
-            System.out.println("Largest Element = "+firstMax);
-            System.out.println("Second Largest Element = "+secondMax);
+            System.out.println("Largest Element = " + firstMax);
+            System.out.println("Second Largest Element = " + secondMax);
         }
 
     }
@@ -39,23 +39,23 @@ public class LargeAndSmallElements {
 
         if (arr.length == 0) {
             System.out.println("Array is empty");
-        } else if (arr.length<2) {
+        } else if (arr.length < 2) {
             System.out.println("only one element in array");
-        }else {
+        } else {
             int firstMin = Integer.MAX_VALUE;
             int secondMin = Integer.MAX_VALUE;
 
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] < firstMin) {
-                    secondMin=firstMin;
+                    secondMin = firstMin;
                     firstMin = arr[i];
                 } else if (arr[i] < secondMin && arr[i] > firstMin) {
                     secondMin = arr[i];
                 }
             }
 
-            System.out.println("Smallest Element = "+firstMin);
-            System.out.println("Second Smallest Element = "+secondMin);
+            System.out.println("Smallest Element = " + firstMin);
+            System.out.println("Second Smallest Element = " + secondMin);
         }
     }
 
