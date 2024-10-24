@@ -26,10 +26,13 @@ public class checkIfArrayIsSortedAndRotated {
 
         int n= nums.length;
 
+        boolean onlyOnce=false;
+
         for (int i=1;i<n;i++){
-            if (nums[i]<nums[i-1]){
+            if (nums[i]<nums[i-1] && onlyOnce==false){
                 int k = n - i;
                 rotate(nums,k);
+                onlyOnce=true;
             }
         }
 
