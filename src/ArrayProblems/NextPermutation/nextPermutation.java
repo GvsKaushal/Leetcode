@@ -2,6 +2,9 @@ package ArrayProblems.NextPermutation;
 
 import java.util.Arrays;
 
+// https://www.youtube.com/watch?v=IhsUbEMfIbY
+
+
 public class nextPermutation {
 
     public static void main(String[] args) {
@@ -15,21 +18,25 @@ public class nextPermutation {
     private static void findNextPermutation(int[] nums) {
 
         int n = nums.length;
-        int cur = nums.length - 2;
 
-        while (cur >= 0 && nums[cur] >= nums[cur + 1]) {
-            cur--;
+        int last = n - 2;
+
+        while (last >= 0 && nums[last] >= nums[last + 1]) {
+            last--;
         }
 
-        if (cur>=0){
-            int i = nums.length - 1;
-            while (i >= cur && nums[cur] >= nums[i]) {
-                i--;
+        if (last >= 0) {
+
+            for (int i = n - 1; i > last; i--) {
+                if (nums[i] > nums[last]) {
+                    swapTemp(nums, i, last);
+                    break;
+                }
             }
-            swapTemp(nums, cur, i);
+
         }
 
-        Reverse(nums, cur + 1, n - 1);
+        Reverse(nums, last + 1, n - 1);
 
     }
 
