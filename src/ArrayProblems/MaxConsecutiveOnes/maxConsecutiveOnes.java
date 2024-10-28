@@ -12,6 +12,7 @@ public class maxConsecutiveOnes {
     private static int findMaxConsecutiveOnes(int[] nums) {
 
         int n = nums.length;
+
         int Maxcount = 0;
         int count = 0;
 
