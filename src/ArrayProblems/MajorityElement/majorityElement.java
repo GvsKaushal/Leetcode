@@ -1,5 +1,8 @@
 package ArrayProblems.MajorityElement;
 
+// https://www.youtube.com/watch?v=gY-I8uQrCkk
+
+
 public class majorityElement {
     public static void main(String[] args) {
 

@@ -1,5 +1,8 @@
 package ArrayProblems.BestTimetoBuyandSellStock;
 
+// https://www.youtube.com/watch?v=5skEWekmJ2w&list=PLJtzaiEpVo2wnxMdNgh7-f65KyzY-mU_4
+
+
 public class bestTimeToBuyAndSellStock {
     public static void main(String[] args) {
 
