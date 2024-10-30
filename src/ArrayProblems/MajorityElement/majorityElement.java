@@ -1,6 +1,8 @@
 package ArrayProblems.MajorityElement;
 
+// Moore Vote Algorithm
 // https://www.youtube.com/watch?v=gY-I8uQrCkk
+// we can also use hashmap
 
 
 public class majorityElement {
