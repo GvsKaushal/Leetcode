@@ -52,7 +52,7 @@ public class MajorityElementII {
         count2 = 0;
 
         for (int num : nums) {
-            if (majority1 == num) {
+            if (majority1 != null && majority1 == num) {
                 count1++;
             }
             if (majority2 != null && majority2 == num) {
@@ -60,13 +60,14 @@ public class MajorityElementII {
             }
         }
 
-        if (count1 >= n / 3) {
-            list.add(majority1);
-        }
 
-        if (count2 >= n / 3) {
-            list.add(majority2);
-        }
+//        if (count1 >= com) {
+//            list.add(majority1);
+//        }
+//
+//        if (count2 >= com) {
+//            list.add(majority2);
+//        }
 
         return list;
     }
