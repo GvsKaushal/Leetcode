@@ -1,5 +1,8 @@
 package ArrayProblems.SpiralMatrix;
 
+// notes
+// https://www.youtube.com/watch?v=3Zv-s9UUrFM
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
