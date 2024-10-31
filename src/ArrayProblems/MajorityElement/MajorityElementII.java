@@ -6,7 +6,9 @@ package ArrayProblems.MajorityElement;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MajorityElementII {
     public static void main(String[] args) {
@@ -21,53 +23,22 @@ public class MajorityElementII {
 
     private static List<Integer> findMajorityElement2(int[] nums) {
 
+        int n = nums.length;
         List<Integer> list = new ArrayList<>();
 
-        int n = nums.length;
+        int z=n/3;
 
-        Integer majority1 = null;
-        int count1 = 0;
-
-        Integer majority2 = null;
-        int count2 = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int num : nums) {
-
-            if (majority1 != null && majority1 == num) {
-                count1++;
-            } else if (majority2 != null && majority2 == num) {
-                count2++;
-            } else if (count1 == 0) {
-                majority1 = num;
-            } else if (count2 == 0) {
-                majority2 = num;
-            } else {
-                count1--;
-                count2--;
-            }
-
+            map.put(num,map.getOrDefault(num,0)+1);
         }
 
-        count1 = 0;
-        count2 = 0;
-
-        for (int num : nums) {
-            if (majority1 != null && majority1 == num) {
-                count1++;
-            }
-            if (majority2 != null && majority2 == num) {
-                count2++;
+        for (Map.Entry<Integer,Integer> e : map.entrySet()){
+            if (e.getValue()>z){
+                list.add(e.getKey());
             }
         }
-
-
-//        if (count1 >= com) {
-//            list.add(majority1);
-//        }
-//
-//        if (count2 >= com) {
-//            list.add(majority2);
-//        }
 
         return list;
     }
