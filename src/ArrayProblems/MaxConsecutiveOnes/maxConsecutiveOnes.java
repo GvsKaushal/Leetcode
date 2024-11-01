@@ -24,7 +24,7 @@ public class maxConsecutiveOnes {
                 count = 0;
             }
 
-            if (Maxcount < count) {
+            if (count > Maxcount) {
                 Maxcount = count;
             }
         }

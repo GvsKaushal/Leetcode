@@ -21,15 +21,13 @@ public class countFrequency {
         System.out.println(map);
 
         if (map.containsValue(3)){
-            System.out.println(map.containsValue(3));
-        }
 
-        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
-            if(e.getValue()==3){
-                System.out.println(e.getKey());
+            for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+                if(e.getValue()==3){
+                    System.out.println(e.getKey());
+                }
             }
         }
-
 
     }
 }

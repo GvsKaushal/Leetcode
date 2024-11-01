@@ -2,7 +2,6 @@ package ArrayProblems.MajorityElement;
 
 // Moore Vote Algorithm
 // leetcode
-// we can also use hashmap
 
 
 import java.util.ArrayList;
@@ -26,16 +25,16 @@ public class MajorityElementII {
         int n = nums.length;
         List<Integer> list = new ArrayList<>();
 
-        int z=n/3;
+        int z = n / 3;
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int num : nums) {
-            map.put(num,map.getOrDefault(num,0)+1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        for (Map.Entry<Integer,Integer> e : map.entrySet()){
-            if (e.getValue()>z){
+        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            if (e.getValue() > z) {
                 list.add(e.getKey());
             }
         }
