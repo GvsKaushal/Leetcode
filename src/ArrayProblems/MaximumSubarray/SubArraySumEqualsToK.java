@@ -1,6 +1,7 @@
 package ArrayProblems.MaximumSubarray;
 
-// leetcode
+// leetcode https://leetcode.com/problems/subarray-sum-equals-k/editorial/
+// not video
 
 import java.util.Arrays;
 import java.util.HashMap;

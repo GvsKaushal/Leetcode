@@ -9,6 +9,7 @@ public class ThreeSum {
     public static void main(String[] args) {
 
         int[] arr = {-1, 0, 1, 2, -1, -4};
+
         List<List<Integer>> result = threeSum(arr);
         System.out.println(result);
 
@@ -16,34 +17,40 @@ public class ThreeSum {
 
     private static List<List<Integer>> threeSum(int[] nums) {
 
+        Arrays.sort(nums);
+
         int n = nums.length;
-
-        HashSet<List<Integer>> list = new HashSet<>();
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        HashSet<Integer> duplicates = new HashSet<>();
+        HashSet<List<Integer>> lists = new HashSet<>();
 
         for (int i = 0; i < n; i++) {
 
-            if (!duplicates.contains(nums[i])) {
+            if (i != 0 && nums[i] == nums[i - 1]) continue;
 
-                duplicates.add(nums[i]);
+            int left = i + 1;
+            int right = n - 1;
 
-                for (int j = i + 1; j < n; j++) {
+            while (left < right) {
 
-                    int complement = -nums[i] - nums[j];
+                int sum = (nums[i]) + (nums[left]) + (nums[right]);
 
-                    if (map.containsKey(complement) && map.get(complement) == i) {
-                        List<Integer> l = Arrays.asList(nums[i], nums[j], complement);
-                        Collections.sort(l);
-                        list.add(l);
-                    }
-                    map.put(nums[j], i);
+                if (sum == 0) {
+
+                    List<Integer> list = new ArrayList<>(Arrays.asList(nums[i], nums[left], nums[right]));
+                    Collections.sort(list);
+                    lists.add(list);
+
+                    left++;
+                    right--;
+
+                } else if (sum < 0) {
+                    left++;
+                } else {
+                    right--;
                 }
-            }
 
+            }
         }
 
-        return new ArrayList<>(list);
+        return new ArrayList<>(lists);
     }
 }

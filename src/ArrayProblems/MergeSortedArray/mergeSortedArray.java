@@ -1,7 +1,7 @@
 package ArrayProblems.MergeSortedArray;
 
 // https://www.youtube.com/watch?v=C4oBXLr3zos
-
+// read1 >= 0 is imp edge case
 
 import java.util.Arrays;
 
@@ -23,7 +23,7 @@ public class mergeSortedArray {
 
         while (read2 >= 0) {
 
-            if (read1 >= 0 && nums1[read1] >= nums2[read2]) {
+            if (read1 >= 0 && nums1[read1] > nums2[read2]) {
                 nums1[write] = nums1[read1];
                 write--;
                 read1--;

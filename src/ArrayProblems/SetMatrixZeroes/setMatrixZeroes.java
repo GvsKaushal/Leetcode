@@ -30,14 +30,14 @@ public class setMatrixZeroes {
         }
 
         for (int i : setRow) {
-            for (int j=0;j<columns;j++){
-                matrix[i][j]=0;
+            for (int j = 0; j < columns; j++) {
+                matrix[i][j] = 0;
             }
         }
 
         for (int j : setcol) {
-            for (int i=0;i<rows;i++){
-                matrix[i][j]=0;
+            for (int i = 0; i < rows; i++) {
+                matrix[i][j] = 0;
             }
         }
     }

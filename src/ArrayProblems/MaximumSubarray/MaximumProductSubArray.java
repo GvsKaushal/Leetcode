@@ -3,6 +3,7 @@ package ArrayProblems.MaximumSubarray;
 // https://www.youtube.com/watch?v=hnswaLJvr6g
 // prefix = 1 * ->
 // suffix = 1 * <-
+// you need to deal with 0
 
 public class MaximumProductSubArray {
     public static void main(String[] args) {

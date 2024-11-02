@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class leaders {
     public static void main(String[] args) {
 
-        int[] arr = {30, 10, 10, 5};
+        int[] arr = {10, 22, 12, 3, 0, 6};
         int[] result = findLeaders(arr);
         System.out.println(Arrays.toString(result));
     }
@@ -28,7 +28,7 @@ public class leaders {
             }
         }
 
-        array=Arrays.copyOf(array,count);
+        array = Arrays.copyOf(array, count);
 
         return array;
     }

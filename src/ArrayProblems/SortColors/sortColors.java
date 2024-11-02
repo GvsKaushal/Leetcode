@@ -33,11 +33,11 @@ public class sortColors {
                 swapBit(nums, i, first);
                 first++;
                 i++;
+            } else if (nums[i] == 1) {
+                i++;
             } else if (nums[i] == 2) {
                 swapBit(nums, i, last);
                 last--;
-            } else if (nums[i] == 1) {
-                i++;
             }
         }
     }

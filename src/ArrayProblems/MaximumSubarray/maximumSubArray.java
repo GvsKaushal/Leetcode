@@ -8,7 +8,9 @@ public class maximumSubArray {
     public static void main(String[] args) {
 
         int[] arr = {1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4};
+
         System.out.println("maximum sum = " + maxSubArray(arr));
+
     }
 
     private static int maxSubArray(int[] nums) {
