@@ -6,8 +6,8 @@ public class SearchInsertPosition {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 3, 5, 6};
-        int val = 5;
+        int[] arr = {5, 7, 7, 8, 8, 10};
+        int val = 8;
 
         int result = searchInsert(arr, val);
         System.out.println(result);

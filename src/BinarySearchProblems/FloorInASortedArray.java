@@ -1,10 +1,12 @@
 package BinarySearchProblems;
 
+// Floor
+
 public class FloorInASortedArray {
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 8};
-        int val = 1;
+        int[] arr = {5, 7, 7, 8, 8, 10};
+        int val = 8;
 
         int result = findFloor(arr, val);
         System.out.println(result);
@@ -15,7 +17,7 @@ public class FloorInASortedArray {
         int ans = -1;
 
         int left = 0;
-        int right = arr.length-1;
+        int right = arr.length - 1;
 
         while (left <= right) {
 
