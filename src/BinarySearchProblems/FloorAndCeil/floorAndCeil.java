@@ -1,8 +1,8 @@
-package BinarySearchProblems;
+package BinarySearchProblems.FloorAndCeil;
 
 import java.util.Arrays;
 
-public class FloorAndCeil {
+public class floorAndCeil {
 
     public static void main(String[] args) {
 

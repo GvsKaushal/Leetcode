@@ -13,26 +13,26 @@ public class SingleElementInSortedArray {
 
         int n = nums.length;
 
-        int first = 1;
-        int last = n - 2;
+        int left = 1;
+        int right = n - 2;
 
         if (n == 1) return nums[0];
-        if (nums[first - 1] != nums[first]) return nums[first - 1];
-        if (nums[last + 1] != nums[last]) return nums[last + 1];
+        if (nums[left - 1] != nums[left]) return nums[left - 1];
+        if (nums[right + 1] != nums[right]) return nums[right + 1];
 
-        while (first <= last) {
+        while (left <= right) {
 
-            int midIndex = (first + last) / 2;
+            int midIndex = (left + right) / 2;
 
             if (nums[midIndex] != nums[midIndex - 1] && nums[midIndex] != nums[midIndex + 1]) return nums[midIndex];
 
             if (midIndex % 2 == 1 && nums[midIndex] == nums[midIndex - 1] ||
                     midIndex % 2 == 0 && nums[midIndex] == nums[midIndex + 1]){
 
-                first=midIndex+1;
+                left=midIndex+1;
 
             }else {
-                last=midIndex-1;
+                right=midIndex-1;
             }
         }
 

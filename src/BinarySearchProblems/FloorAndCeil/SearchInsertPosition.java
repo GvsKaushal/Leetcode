@@ -1,5 +1,6 @@
-package BinarySearchProblems;
+package BinarySearchProblems.FloorAndCeil;
 
+// Notes
 // Ceil
 
 public class SearchInsertPosition {

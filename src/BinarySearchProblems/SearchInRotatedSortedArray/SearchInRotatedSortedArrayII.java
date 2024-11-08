@@ -1,17 +1,20 @@
-package BinarySearchProblems;
+package BinarySearchProblems.SearchInRotatedSortedArray;
 
-public class SearchInRotatedSortedArray {
+// https://www.youtube.com/watch?v=w2G2W8l__pc
+// Notes
+
+public class SearchInRotatedSortedArrayII {
 
     public static void main(String[] args) {
 
-        int[] arr = {4, 5, 6, 7, 0, 1, 2};
+        int[] arr = {1,0,1,1,1};
         int val = 0;
 
-        int result = search(arr, val);
+        boolean result = search(arr, val);
         System.out.println(result);
     }
 
-    private static int search(int[] nums, int target) {
+    private static boolean search(int[] nums, int target) {
 
         int n = nums.length;
 
@@ -22,7 +25,13 @@ public class SearchInRotatedSortedArray {
 
             int midIndex = (left + right) / 2;
 
-            if (nums[midIndex] == target) return midIndex;
+            if (nums[midIndex] == target) return true;
+
+            if (nums[left] == nums[midIndex] && nums[midIndex] == nums[right]) {
+                left = left + 1;
+                right = right - 1;
+                continue;
+            }
 
             if (nums[left] <= nums[midIndex]) {
                 if (nums[left] <= target && target <= nums[midIndex]) {
@@ -39,8 +48,6 @@ public class SearchInRotatedSortedArray {
             }
         }
 
-        return -1;
-
-
+        return false;
     }
 }

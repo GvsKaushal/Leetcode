@@ -1,5 +1,6 @@
-package BinarySearchProblems;
+package BinarySearchProblems.FloorAndCeil;
 
+// Notes
 // edge case - ( ceil == -1 || ceil == n || nums[ceil] != target )
 
 import java.util.Arrays;
@@ -8,7 +9,7 @@ public class FindFirstAndLastPositionInSortedArray {
 
     public static void main(String[] args) {
 
-        int[] arr = {2, 2};
+        int[] arr = {1,1,3,3,3,3,3,5,6,78,9};
         int val = 3;
 
         int[] result = searchRange(arr, val);

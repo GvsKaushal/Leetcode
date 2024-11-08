@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.SearchInRotatedSortedArray;
 
 public class FindMinimumInRotatedSortedArray {
 
