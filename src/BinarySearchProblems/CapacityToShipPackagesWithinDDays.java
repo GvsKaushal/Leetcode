@@ -35,26 +35,23 @@ public class CapacityToShipPackagesWithinDDays {
         return ans;
     }
 
+
     private static int getDays(int[] weights, int capacity) {
 
-        int days = 0;
-        int cap = capacity;
+        int days = 1;
+        int cap = 0;
 
         int i = 0;
         int n = weights.length;
 
         while (i < n) {
 
-            if (cap - weights[i] >= 0) {
-                cap = cap - weights[i];
-                if (cap == 0 || i == n - 1) {
-                    days++;
-                    cap = capacity;
-                }
+            if (cap+weights[i]<=capacity){
+                cap=cap+weights[i];
                 i++;
-            } else {
+            }else {
                 days++;
-                cap = capacity;
+                cap=0;
             }
         }
         return days;

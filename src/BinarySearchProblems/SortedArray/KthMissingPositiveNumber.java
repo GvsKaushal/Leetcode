@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.SortedArray;
 
 public class KthMissingPositiveNumber {
 

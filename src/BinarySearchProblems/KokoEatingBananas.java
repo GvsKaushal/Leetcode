@@ -1,13 +1,15 @@
 package BinarySearchProblems;
 
+// FindTheSmallestDivisorGivenAThreshold same
+
 import java.util.Arrays;
 
 public class KokoEatingBananas {
 
     public static void main(String[] args) {
 
-        int[] arr = {805306368, 805306368, 805306368};
-        int h = 1000000000;
+        int[] arr = {3, 6, 7, 11};
+        int h = 8;
 
         int minimumBananas = minEatingSpeed(arr, h);
         System.out.println("Minimuum number of bananas per hour = " + minimumBananas);
@@ -32,11 +34,8 @@ public class KokoEatingBananas {
             } else {
                 left = midIndex + 1;
             }
-
         }
-
         return ans;
-
     }
 
     private static int TotalTime(int[] piles, int m) {

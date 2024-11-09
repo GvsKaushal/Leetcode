@@ -1,13 +1,15 @@
 package BinarySearchProblems;
 
+// KokoEatingBananas same
+
 import java.util.Arrays;
 
 public class FindTheSmallestDivisorGivenAThreshold {
 
     public static void main(String[] args) {
 
-        int[] nums = {21212, 10101, 12121};
-        int threshold = 1000000;
+        int[] nums = {1, 2, 5, 9};
+        int threshold = 6;
         int result = smallestDivisor(nums, threshold);
         System.out.println(result);
     }
