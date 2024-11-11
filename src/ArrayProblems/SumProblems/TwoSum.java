@@ -34,7 +34,6 @@ public class TwoSum {
             }
         }
 
-        // If no solution, return an empty array
         return new int[]{-1, -1};
     }
 }

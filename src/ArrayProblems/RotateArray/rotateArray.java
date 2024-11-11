@@ -7,7 +7,7 @@ public class rotateArray {
     public static void main(String[] args) {
 
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
-        int k = 10;
+        int k = 2;
 
         rotate(nums, k);
         System.out.println(Arrays.toString(nums));
