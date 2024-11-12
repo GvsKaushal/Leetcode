@@ -1,5 +1,7 @@
 package BinarySearchProblems.AggressiveCows;
 
+// error
+
 import java.util.Arrays;
 
 public class aggressiveCows {
@@ -27,7 +29,7 @@ public class aggressiveCows {
 
             int mid = (left + right) / 2;
 
-            if (placeCows(stalls, k, mid)) {
+            if (placeCows(stalls, mid)) {
                 ans = mid;
                 left = mid + 1;
             } else {
@@ -37,7 +39,7 @@ public class aggressiveCows {
         return ans;
     }
 
-    private static boolean placeCows(int[] stalls, int cows, int min_distance) {
+    private static boolean placeCows(int[] stalls, int min_distance) {
 
         int cows_count = 1;
         int last_cow = stalls[0];
