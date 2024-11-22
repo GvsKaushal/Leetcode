@@ -1,4 +1,4 @@
-package StringProblems;
+package StringProblems.Conversions;
 
 import java.util.HashMap;
 

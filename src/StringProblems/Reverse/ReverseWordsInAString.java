@@ -1,4 +1,4 @@
-package StringProblems;
+package StringProblems.Reverse;
 
 
 public class ReverseWordsInAString {
@@ -12,20 +12,23 @@ public class ReverseWordsInAString {
 
     private static String reverseWords(String s) {
 
+        s = s.trim();
+        s = s.replaceAll(" +", " ");
 
-        String[] words = s.split("\\s");
+        String[] words = s.split(" ");
 
         StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = words.length - 1; i >= 0; i--) {
 
-            if (!words[i].isBlank()) {
-                stringBuilder.append(words[i]);
+            stringBuilder.append(words[i]);
+            if (i!=0){
                 stringBuilder.append(" ");
             }
-        }
-        String reversedString = stringBuilder.substring(0, stringBuilder.length() - 1);
 
-        return reversedString;
+
+        }
+
+        return String.valueOf(stringBuilder);
     }
 }

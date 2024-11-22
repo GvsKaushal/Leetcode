@@ -1,6 +1,5 @@
-package StringProblems;
+package StringProblems.Anagram;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ValidAnagram {

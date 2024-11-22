@@ -1,4 +1,4 @@
-package StringProblems;
+package StringProblems.Parentheses;
 
 import java.util.Stack;
 
