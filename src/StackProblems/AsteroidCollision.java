@@ -10,7 +10,7 @@ public class AsteroidCollision {
 
     public static void main(String[] args) {
 
-        int[] asteroids = {10, 2, -5};
+        int[] asteroids = {100, -2, -5};
         int[] result = asteroidCollision(asteroids);
         System.out.println(Arrays.toString(result));
     }
@@ -19,9 +19,9 @@ public class AsteroidCollision {
 
         Stack<Integer> stack = new Stack<>();
 
+        int i = 0;
         int len = asteroids.length;
 
-        int i = 0;
         while (i < len) {
             if (asteroids[i] > 0) {
                 stack.push(asteroids[i]);

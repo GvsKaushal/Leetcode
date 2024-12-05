@@ -20,7 +20,6 @@ public class NextGreaterElementI {
     private static int[] nextGreaterElement(int[] nums1, int[] nums2) {
 
         Stack<Integer> stack = new Stack<>();
-
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         int n1 = nums1.length;
