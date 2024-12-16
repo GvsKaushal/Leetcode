@@ -12,10 +12,10 @@ public class MyStack {
 
     public void push(int x) {
         queue.push(x);
-        int size=queue.size();
-        while (size>1){
+        int size = queue.size();
+
+        for (int i = 0; i < size; i++) {
             queue.push(queue.remove());
-            size--;
         }
     }
 

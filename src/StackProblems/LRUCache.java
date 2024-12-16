@@ -1,5 +1,7 @@
 package StackProblems;
 
+// https://www.youtube.com/watch?v=z9bJUPxzFOw
+
 import java.util.HashMap;
 
 public class LRUCache {
@@ -50,7 +52,6 @@ public class LRUCache {
             temp.value = value;
             remove(temp);
             insert(temp);
-            hashMap.put(key, temp);
         } else {
             if (capacity == hashMap.size()) {
                 Node removeNode = tail.prev;

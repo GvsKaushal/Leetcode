@@ -8,7 +8,6 @@ public class MyQueue {
     Stack<Integer> stack2 = new Stack<>();
 
     public MyQueue() {
-
     }
 
     public void push(int x) {
@@ -16,6 +15,7 @@ public class MyQueue {
     }
 
     public int pop() {
+
         if (stack2.isEmpty()) {
             while (!stack1.isEmpty()) {
                 stack2.push(stack1.pop());
