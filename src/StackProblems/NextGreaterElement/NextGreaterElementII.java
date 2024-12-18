@@ -18,27 +18,27 @@ public class NextGreaterElementII {
     private static int[] nextGreaterElements(int[] nums) {
 
         Stack<Integer> stack = new Stack<>();
-        int[] result = new int[nums.length];
 
         int len = nums.length;
+        int[] result = new int[len];
 
         for (int i = (2 * len) - 1; i >= 0; i--) {
 
             if (i < len) {
 
-                while (!stack.isEmpty() && stack.peek() <= nums[i]) {
+                while (!stack.isEmpty() && nums[i] >= stack.peek()) {
                     stack.pop();
                 }
                 if (stack.isEmpty()) {
-                    result[i]=-1;
+                    result[i] = -1;
                 } else {
-                    result[i]=stack.peek();
+                    result[i] = stack.peek();
                 }
                 stack.push(nums[i]);
 
             } else {
 
-                while (!stack.isEmpty() && stack.peek() < nums[i % len]) {
+                while (!stack.isEmpty() && nums[i % len] > stack.peek()) {
                     stack.pop();
                 }
 

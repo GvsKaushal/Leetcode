@@ -1,5 +1,7 @@
 package StackProblems.NextGreater;
 
+// increasing Stack
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -7,9 +9,10 @@ public class NextSmallerToLeft {
 
     public static void main(String[] args) {
 
-        int[] nums = {4, 5, 2, 10, 8};
+        int[] nums = {41, 88, 58, 69, 93, 42, 44, 25, 12, 47, 41, 88, 58, 69, 93, 42, 44, 25, 12, 47};
 
         int[] result = NextSmallerElementToLeft(nums);
+        System.out.println(Arrays.toString(nums));
         System.out.println(Arrays.toString(result));
     }
 
@@ -17,9 +20,8 @@ public class NextSmallerToLeft {
 
         Stack<Integer> stack = new Stack<>();
 
-        int[] result = new int[arr.length];
-
         int n2 = arr.length;
+        int[] result = new int[n2];
 
         for (int i = 0; i < n2; i++) {
 

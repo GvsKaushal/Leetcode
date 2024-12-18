@@ -27,7 +27,7 @@ public class NextGreaterElementI {
 
         for (int i = n2 - 1; i >= 0; i--) {
 
-            while (!stack.isEmpty() && stack.peek() <= nums2[i]) {
+            while (!stack.isEmpty() && nums2[i] >= stack.peek()) {
                 stack.pop();
             }
             if (stack.isEmpty()) {

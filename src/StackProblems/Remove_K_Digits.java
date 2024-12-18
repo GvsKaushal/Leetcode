@@ -31,13 +31,14 @@ public class Remove_K_Digits {
         int count = k;
 
         for (int i = 0; i < len; i++) {
-            while (!stack.isEmpty() && count > 0 && stack.peek() > num.charAt(i)) {
+            while (!stack.isEmpty() && count > 0 && num.charAt(i) < stack.peek()) {
                 stack.pop();
                 count--;
             }
             stack.push(num.charAt(i));
         }
 
+        // if entire array is increasing order then count won't decrease
         while (count > 0) {
             stack.pop();
             count--;
@@ -52,9 +53,6 @@ public class Remove_K_Digits {
 
         String result = removeTailingZeros(String.valueOf(stringBuilder));
 
-        if (len == result.length()) {
-            return result.substring(0, len - k);
-        }
 
         return result;
     }

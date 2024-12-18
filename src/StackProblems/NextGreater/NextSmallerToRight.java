@@ -1,5 +1,7 @@
 package StackProblems.NextGreater;
 
+// increasing Stack
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -7,9 +9,10 @@ public class NextSmallerToRight {
 
     public static void main(String[] args) {
 
-        int[] nums = {3, 1, 2, 4};
+        int[] nums = {41, 88, 58, 69, 93, 42, 44, 25, 12, 47, 41, 88, 58, 69, 93, 42, 44, 25, 12, 47};
 
         int[] result = NextSmallerElementToRight(nums);
+        System.out.println(Arrays.toString(nums));
         System.out.println(Arrays.toString(result));
     }
 

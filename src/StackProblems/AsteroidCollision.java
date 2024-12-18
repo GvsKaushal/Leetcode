@@ -19,13 +19,12 @@ public class AsteroidCollision {
 
         Stack<Integer> stack = new Stack<>();
 
-        int i = 0;
+
         int len = asteroids.length;
 
-        while (i < len) {
+        for (int i = 0; i < len; i++) {
             if (asteroids[i] > 0) {
                 stack.push(asteroids[i]);
-                i++;
             } else {
                 int modValue = Math.abs(asteroids[i]);
 
@@ -34,14 +33,12 @@ public class AsteroidCollision {
                 }
                 if (!stack.isEmpty() && stack.peek() > 0 && modValue == stack.peek()) {
                     stack.pop();
-                    i++;
                     continue;
                 }
                 // Edge case check
                 if (stack.isEmpty() || stack.peek() < 0) {
                     stack.push(asteroids[i]);
                 }
-                i++;
             }
         }
 

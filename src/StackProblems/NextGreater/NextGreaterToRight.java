@@ -9,6 +9,7 @@ public class NextGreaterToRight {
         int[] nums = {41, 88, 58, 69, 93, 42, 44, 25, 12, 47, 41, 88, 58, 69, 93, 42, 44, 25, 12, 47};
 
         int[] result = nextGreaterElementToRight(nums);
+        System.out.println(Arrays.toString(nums));
         System.out.println(Arrays.toString(result));
     }
 
