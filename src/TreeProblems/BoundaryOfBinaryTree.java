@@ -38,10 +38,8 @@ public class BoundaryOfBinaryTree {
 
             if (current.left != null) {
                 current = current.left;
-            } else if (current.right != null) {
-                current = current.right;
             } else {
-                break;
+                current = current.right;
             }
 
         }
@@ -86,10 +84,8 @@ public class BoundaryOfBinaryTree {
 
             if (current.right != null) {
                 current = current.right;
-            } else if (current.left != null) {
-                current = current.left;
             } else {
-                break;
+                current = current.left;
             }
 
         }
@@ -98,6 +94,5 @@ public class BoundaryOfBinaryTree {
             list.add(stack.pop());
         }
     }
-
 
 }
