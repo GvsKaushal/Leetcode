@@ -51,6 +51,8 @@ public class PrintMaximumSubArray {
             count++;
         }
 
+        System.out.println(finalMax);
+
         return array;
     }
 }

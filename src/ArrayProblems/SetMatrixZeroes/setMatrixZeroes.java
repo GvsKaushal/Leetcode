@@ -18,13 +18,13 @@ public class setMatrixZeroes {
         int columns = matrix[0].length;
 
         HashSet<Integer> setRow = new HashSet<>();
-        HashSet<Integer> setcol = new HashSet<>();
+        HashSet<Integer> setCol = new HashSet<>();
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (matrix[i][j] == 0) {
                     setRow.add(i);
-                    setcol.add(j);
+                    setCol.add(j);
                 }
             }
         }
@@ -35,7 +35,7 @@ public class setMatrixZeroes {
             }
         }
 
-        for (int j : setcol) {
+        for (int j : setCol) {
             for (int i = 0; i < rows; i++) {
                 matrix[i][j] = 0;
             }

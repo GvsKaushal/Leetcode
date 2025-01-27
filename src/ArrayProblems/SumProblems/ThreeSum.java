@@ -20,7 +20,7 @@ public class ThreeSum {
         Arrays.sort(nums);
 
         int n = nums.length;
-        HashSet<List<Integer>> lists = new HashSet<>();
+        List<List<Integer>> lists = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
 
@@ -42,6 +42,13 @@ public class ThreeSum {
                     left++;
                     right--;
 
+                    while (left < right && nums[left] == nums[left - 1]) {
+                        left++;
+                    }
+                    while (left < right && nums[right] == nums[right + 1]) {
+                        right--;
+                    }
+
                 } else if (sum < 0) {
                     left++;
                 } else {
@@ -51,6 +58,6 @@ public class ThreeSum {
             }
         }
 
-        return new ArrayList<>(lists);
+        return lists;
     }
 }

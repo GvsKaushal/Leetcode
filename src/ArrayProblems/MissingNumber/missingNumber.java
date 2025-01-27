@@ -4,7 +4,7 @@ public class missingNumber {
 
     public static void main(String[] args) {
 
-        int[] array={9,6,4,2,3,5,7,0,1};
+        int[] array={0,1,3,2,5};
 
         System.out.println("Missing Number = "+findMissingNumber(array));
 
