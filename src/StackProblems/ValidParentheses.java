@@ -9,7 +9,7 @@ public class ValidParentheses {
 
     public static void main(String[] args) {
 
-        String string = "){";
+        String string = "([])";
         boolean isValidParentheses = isValid(string);
         System.out.println(isValidParentheses);
     }

@@ -30,14 +30,14 @@ public class MiddleOfTheLinkedList {
 
     private static ListNode middleNode(ListNode head) {
 
-        ListNode one = head;
-        ListNode two = head;  // head.next (even effect)  // head.next.next (odd and even)
+        ListNode slow = head;
+        ListNode fast = head;  // head.next (even effect)  // head.next.next (odd and even)
 
-        while (two != null && two.next != null) {
-            one = one.next;
-            two = two.next.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        return one;
+        return slow;
     }
 }
