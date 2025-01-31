@@ -11,7 +11,6 @@ public class singleNumber {
 
     private static int findSingleNumber(int[] nums) {
 
-        int n = nums.length;
 
         int XOR = 0;
 

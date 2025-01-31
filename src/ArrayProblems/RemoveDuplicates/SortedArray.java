@@ -18,9 +18,9 @@ public class SortedArray {
 
         int firstIndex = 1;
 
-        for (int secondIndex = 1; secondIndex < len; secondIndex++) {
-            if (nums[secondIndex] != nums[secondIndex - 1]) {
-                nums[firstIndex] = nums[secondIndex];
+        for (int i = 1; i < len; i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[firstIndex] = nums[i];
                 firstIndex++;
             }
         }
