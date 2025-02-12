@@ -1,4 +1,4 @@
-package BinarySearchProblems.FloorAndCeil;
+package BinarySearchProblems.Upper_LowerBound;
 
 // Notes
 // Ceil
@@ -16,8 +16,6 @@ public class SearchInsertPosition {
 
     private static int searchInsert(int[] nums, int target) {
 
-        int ans=nums.length;
-
         int l = 0;
         int r = nums.length - 1;
 
@@ -27,13 +25,12 @@ public class SearchInsertPosition {
             int mid = nums[midIndex];
 
             if (mid >= target) {
-                ans = midIndex;
                 r = midIndex - 1;
             } else {
                 l = midIndex + 1;
             }
         }
 
-        return ans;
+        return l;
     }
 }

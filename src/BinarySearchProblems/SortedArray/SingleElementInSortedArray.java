@@ -1,5 +1,7 @@
 package BinarySearchProblems.SortedArray;
 
+// https://www.youtube.com/watch?v=AZOmHuHadxQ
+
 public class SingleElementInSortedArray {
     public static void main(String[] args) {
 
@@ -27,12 +29,12 @@ public class SingleElementInSortedArray {
             if (nums[midIndex] != nums[midIndex - 1] && nums[midIndex] != nums[midIndex + 1]) return nums[midIndex];
 
             if (midIndex % 2 == 1 && nums[midIndex] == nums[midIndex - 1] ||
-                    midIndex % 2 == 0 && nums[midIndex] == nums[midIndex + 1]){
+                    midIndex % 2 == 0 && nums[midIndex] == nums[midIndex + 1]) {
 
-                left=midIndex+1;
+                left = midIndex + 1;
 
-            }else {
-                right=midIndex-1;
+            } else {
+                right = midIndex - 1;
             }
         }
 

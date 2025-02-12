@@ -1,34 +1,20 @@
-package BinarySearchProblems.FloorAndCeil;
+package BinarySearchProblems.Upper_LowerBound;
 
-// Notes
-// edge case - ( ceil == -1 || ceil == n || nums[ceil] != target )
+//Definition:
+//        Floor of a number x: The largest number in the array that is ≤ x.
+//        Ceil of a number x: The smallest number in the array that is ≥ x.
 
-import java.util.Arrays;
-
-public class FindFirstAndLastPositionInSortedArray {
+public class floorAndCeil {
 
     public static void main(String[] args) {
 
-        int[] arr = {1,1,3,3,3,3,3,5,6,78,9};
-        int val = 3;
+        int[] arr = {5, 7, 7, 8, 8, 10};
+        int val = 8;
 
-        int[] result = searchRange(arr, val);
-        System.out.println(Arrays.toString(result));
-    }
+        int ceil = getCeilIndex(arr, val);
+        int floor = getFloorIndex(arr, val);
 
-    private static int[] searchRange(int[] nums, int target) {
-
-        int n = nums.length;
-
-        if (n == 0) return new int[]{-1, -1};
-
-        int ceil = getCeilIndex(nums, target);
-        int floor = getFloorIndex(nums, target);
-
-        if ( ceil == -1 || ceil == n || nums[ceil] != target ) return new int[]{-1, -1};
-
-
-        return new int[]{ceil, floor};
+        System.out.println(ceil + " " + floor);
     }
 
     private static int getCeilIndex(int[] nums, int target) {

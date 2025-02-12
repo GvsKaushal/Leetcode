@@ -19,9 +19,6 @@ public class Insert_Interval {
 
     private static int[][] insert(int[][] intervals, int[] newInterval) {
 
-        if (intervals.length == 0) {
-            return new int[][]{newInterval};
-        }
 
         int c = newInterval[0];
         int d = newInterval[1];

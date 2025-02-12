@@ -7,14 +7,14 @@ public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
 
-        String str = "cbbd";
+        String str = "babad";
         String longestPalindrome = longestPalindrome(str);
         System.out.println(longestPalindrome);
     }
 
     private static String longestPalindrome(String s) {
 
-        String longestPalindrome = "";
+        StringBuilder longestPalindrome = new StringBuilder();
 
         int left;
         int right;
@@ -29,7 +29,8 @@ public class LongestPalindromicSubstring {
             while ((left >= 0 && right < n) && s.charAt(left) == s.charAt(right)) {
 
                 if ((right - left + 1) > longestPalindrome.length()) {
-                    longestPalindrome = s.substring(left, right + 1);
+                    longestPalindrome.setLength(0);
+                    longestPalindrome.append(s, left, right + 1);
                 }
 
                 left--;
@@ -42,7 +43,8 @@ public class LongestPalindromicSubstring {
             while ((left >= 0 && right < n) && s.charAt(left) == s.charAt(right)) {
 
                 if ((right - left + 1) > longestPalindrome.length()) {
-                    longestPalindrome = s.substring(left, right + 1);
+                    longestPalindrome.setLength(0);
+                    longestPalindrome.append(s, left, right + 1);
                 }
 
                 left--;
@@ -51,8 +53,6 @@ public class LongestPalindromicSubstring {
 
         }
 
-
-        return longestPalindrome;
+        return String.valueOf(longestPalindrome);
     }
-
 }

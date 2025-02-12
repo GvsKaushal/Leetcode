@@ -17,23 +17,23 @@ public class RemoveOutermostParentheses {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        Stack<Character> stack = new Stack<>();
+        int count = 0;
 
         for (int i = 0; i < n; i++) {
 
             if (s.charAt(i) == '(') {
 
-                if (!stack.empty()) {
+                if (count > 0) {
                     stringBuilder.append(s.charAt(i));
                 }
 
-                stack.push('(');
+                count++;
 
             } else {
 
-                stack.pop();
+                count--;
 
-                if (!stack.empty()) {
+                if (count > 0) {
                     stringBuilder.append(s.charAt(i));
                 }
 
