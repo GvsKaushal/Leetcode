@@ -46,13 +46,17 @@ public class SplitArrayLargestSum {
         int painter = 1;
         int units = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        int i = 0;
+        int n = nums.length;
+
+        while (i < n) {
 
             if (units + nums[i] <= MaxUnits) {
                 units = units + nums[i];
+                i++;
             } else {
                 painter++;
-                units = nums[i];
+                units = 0;
             }
         }
 

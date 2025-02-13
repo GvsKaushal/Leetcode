@@ -8,15 +8,15 @@ public class aggressiveCows {
 
     public static void main(String[] args) {
 
-        int[] stalls = {10, 1, 2, 7, 5};
-        int cows = 4;
+        int[] stalls = {6, 4, 3, 16, 20, 7, 18, 10};
+        int cows = 5;
 
         int result = aggressive_Cows(stalls, cows);
         System.out.println(result);
     }
 
     private static int aggressive_Cows(int[] stalls, int k) {
-        
+
         Arrays.sort(stalls);
         if (stalls.length < k) return -1;
 
@@ -29,7 +29,7 @@ public class aggressiveCows {
 
             int mid = (left + right) / 2;
 
-            if (placeCows(stalls, mid)) {
+            if (placeCows(stalls, mid, k)) {
                 ans = mid;
                 left = mid + 1;
             } else {
@@ -39,7 +39,7 @@ public class aggressiveCows {
         return ans;
     }
 
-    private static boolean placeCows(int[] stalls, int min_distance) {
+    private static boolean placeCows(int[] stalls, int min_distance, int no_of_cows) {
 
         int cows_count = 1;
         int last_cow = stalls[0];
@@ -53,10 +53,11 @@ public class aggressiveCows {
 
         }
 
-        if (cows_count >= 4) {
+        if (cows_count >= no_of_cows) {
             return true;
         } else {
             return false;
         }
+
     }
 }

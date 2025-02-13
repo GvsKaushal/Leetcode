@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.Painterspartition;
 
 import java.util.Arrays;
 
