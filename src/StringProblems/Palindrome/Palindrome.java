@@ -13,13 +13,11 @@ public class Palindrome {
 
         int n = s.length();
 
-        if (n == 1) return true;
-
         int i = 0;
         int j = n - 1;
 
-        while (i<j){
-            if (s.charAt(i)!=s.charAt(j)){
+        while (i < j) {
+            if (s.charAt(i) != s.charAt(j)) {
                 return false;
             }
             i++;

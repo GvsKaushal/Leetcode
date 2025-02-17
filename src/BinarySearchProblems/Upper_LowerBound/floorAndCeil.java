@@ -9,7 +9,7 @@ public class floorAndCeil {
     public static void main(String[] args) {
 
         int[] arr = {5, 7, 7, 8, 8, 10};
-        int val = 8;
+        int val = 6;
 
         int ceil = getCeilIndex(arr, val);
         int floor = getFloorIndex(arr, val);

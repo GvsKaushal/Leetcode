@@ -11,9 +11,9 @@ public class MinimumNumberofDaystoMakemBouquets {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 10, 3, 10, 2};
-        int bouquets = 3;
-        int flowers = 1;
+        int[] arr = {7,7,7,7,12,7,7};
+        int bouquets = 2;
+        int flowers = 3;
 
         int MinimumDays = minDays(arr, bouquets, flowers);
         System.out.println(MinimumDays);
@@ -26,7 +26,7 @@ public class MinimumNumberofDaystoMakemBouquets {
         int left = Arrays.stream(bloomDay).min().getAsInt();
         int right = Arrays.stream(bloomDay).max().getAsInt();
 
-        int ans=-1;
+        int ans = -1;
 
         while (left <= right) {
 
@@ -34,11 +34,11 @@ public class MinimumNumberofDaystoMakemBouquets {
 
             int NoofBouquets = getBouquetsAtGivenDay(bloomDay, midIndex, k);
 
-            if (NoofBouquets>=m){
-                ans=midIndex;
-                right=midIndex-1;
-            }else {
-                left=midIndex+1;
+            if (NoofBouquets >= m) {
+                ans = midIndex;
+                right = midIndex - 1;
+            } else {
+                left = midIndex + 1;
             }
 
         }
@@ -47,18 +47,22 @@ public class MinimumNumberofDaystoMakemBouquets {
 
     private static int getBouquetsAtGivenDay(int[] arr, int day, int k) {
 
-        int count=0;
-        int Bouquets=0;
+        int count = 0;
+        int Bouquets = 0;
 
-        for (int i:arr){
-            if (day>=i){
+        for (int i : arr) {
+
+            if (day >= i) {
                 count++;
             }else {
-                Bouquets=Bouquets+(count/k);
                 count=0;
             }
+
+            if (count == k) {
+                Bouquets++;
+                count = 0;
+            }
         }
-        Bouquets=Bouquets+(count/k); // edge case
 
         return Bouquets;
     }
