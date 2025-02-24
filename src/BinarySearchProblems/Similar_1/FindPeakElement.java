@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.Similar_1;
 
 public class FindPeakElement {
 

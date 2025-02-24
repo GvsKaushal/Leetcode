@@ -1,4 +1,4 @@
-package BinarySearchProblems.SortedArray;
+package BinarySearchProblems.Similar_1;
 
 // https://www.youtube.com/watch?v=AZOmHuHadxQ
 
