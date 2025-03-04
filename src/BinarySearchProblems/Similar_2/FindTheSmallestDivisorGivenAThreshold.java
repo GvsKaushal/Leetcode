@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.Similar_2;
 
 // KokoEatingBananas same
 
@@ -38,15 +38,14 @@ public class FindTheSmallestDivisorGivenAThreshold {
 
     private static int getThreshold(int[] nums, int divisor) {
 
-        int Divisor = 0;
+        int ans = 0;
 
+        // math.cell replace
         for (int n : nums) {
-
-            double divide = Math.ceil((double) n / (double) divisor);
-            Divisor = Divisor + (int) divide;
+            ans = ans + (n + divisor - 1) / divisor;
         }
 
-        return Divisor;
+        return ans;
 
     }
 

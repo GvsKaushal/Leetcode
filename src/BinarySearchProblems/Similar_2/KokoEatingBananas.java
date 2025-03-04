@@ -1,4 +1,4 @@
-package BinarySearchProblems;
+package BinarySearchProblems.Similar_2;
 
 // FindTheSmallestDivisorGivenAThreshold same
 
@@ -42,10 +42,8 @@ public class KokoEatingBananas {
 
         int TotalTime = 0;
 
-        for (int i = 0; i < piles.length; i++) {
-
-            double z = Math.ceil((double) piles[i] / (double) m);
-            TotalTime = TotalTime + (int) z;
+        for (int pile : piles) {
+            TotalTime = TotalTime + (pile + m - 1) / m;
         }
 
         return TotalTime;
