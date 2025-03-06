@@ -26,7 +26,7 @@ public class AsteroidCollision {
             if (asteroids[i] > 0) {
                 stack.push(asteroids[i]);
             } else {
-                int modValue = Math.abs(asteroids[i]);
+                int modValue = -1 * asteroids[i];
 
                 while (!stack.isEmpty() && stack.peek() > 0 && modValue > stack.peek()) {
                     stack.pop();
