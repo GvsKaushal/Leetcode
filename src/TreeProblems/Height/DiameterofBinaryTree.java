@@ -14,7 +14,7 @@ public class DiameterofBinaryTree {
         return Diameter[0];
     }
 
-    public int heightOfBinaryTree(TreeNode root, int[] diameter) {
+    private int heightOfBinaryTree(TreeNode root, int[] diameter) {
 
         if (root == null) return 0;
 

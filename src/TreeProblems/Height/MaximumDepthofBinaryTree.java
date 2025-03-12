@@ -3,7 +3,7 @@ package TreeProblems.Height;
 
 public class MaximumDepthofBinaryTree {
 
-    public int maxDepth(TreeNode root) {
+    private static int maxDepth(TreeNode root) {
 
         if (root == null) return 0;
 
