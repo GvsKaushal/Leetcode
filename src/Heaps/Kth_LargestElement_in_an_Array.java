@@ -8,13 +8,13 @@ public class Kth_LargestElement_in_an_Array {
 
         PriorityQueue<Integer> heap = new PriorityQueue<>();
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
             if (heap.size() < k) {
-                heap.add(nums[i]);
+                heap.add(num);
             } else {
-                if (nums[i] > heap.peek()) {
+                if (num > heap.peek()) {
                     heap.poll();
-                    heap.add(nums[i]);
+                    heap.add(num);
                 }
             }
         }
